@@ -1,0 +1,40 @@
+:root {
+  --tile-size: 10vw;
+  --black-tile-color: rgb(140, 29, 165);
+  --white-tile-color: rgb(255, 255, 255);
+  --border-color: rgb(140, 29, 165);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.board {
+  border: solid 1px var(--border-color);
+  display: grid;
+  grid-template-columns: repeat(5, var(--tile-size));
+  grid-auto-rows: var(--tile-size);
+}
+
+.cell {
+  border: solid 1px var(--border-color);
+
+  display: grid;
+  place-content: center;
+  font-size: 6vw;
+}
+
+.cell.white {
+  background-color: var(--white-tile-color);
+}
+
+.cell.black {
+  background-color: var(--black-tile-color);
+}
+
+.cell.covered {
+  background-color: grey;
+}
